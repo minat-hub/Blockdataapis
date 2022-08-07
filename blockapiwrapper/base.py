@@ -1,7 +1,10 @@
 import requests
+from decouple import config
+
+API_TOKEN = config("etherscan_token", default="")
 
 class Block:
-    def __init__(self, block_id, block_hash, block_size,token,address):
+    def __init__(self, address=None,token=None,block_id=None, block_hash=None, block_size=None,):
         self.block_id = block_id
         self.block_hash = block_hash
         self.block_size = block_size
@@ -12,7 +15,8 @@ class Marketplace(Block):
     pass
 
 class Explorer(Block):
-    super().__init__()
+    def __init__(self, address, token):
+        super(self.__class__, self).__init__(address, token)
 
     def etherscan_accounts(self, action):
         if action == "transactions" or action not in ["internal_transactions", "balance"]:
@@ -25,6 +29,7 @@ class Explorer(Block):
             response = requests.get(f"https://api.etherscan.io/api?module=account&action=balancemulti&address={self.address}&tag=latest&apikey={self.token}")
 
         return response.json()
+
     def etherscan_gastracker(self, action):
         if action == "gas_history":
             response = requests.post(f'https://eth-mainnet.alchemyapi.io/v2/${self.token}')
@@ -47,3 +52,7 @@ class Explorer(Block):
 
 class Exchanges(Block):
     pass
+
+if __name__ == "__main__":
+    scanner = Explorer("0xb38ef143BA4CDE9e66B5f93E23315E979e886D04", API_TOKEN)
+    print(scanner.etherscan_accounts("transactions"))
