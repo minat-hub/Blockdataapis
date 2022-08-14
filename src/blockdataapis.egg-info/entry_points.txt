@@ -1,2 +1,0 @@
-[console_scripts]
-blockdata = blockapiwrapper.__main__
