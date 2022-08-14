@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/blockapiwrapper/__init__.py
+src/blockapiwrapper/__main__.py
+src/blockapiwrapper/base.py
+src/blockdataapis.egg-info/PKG-INFO
+src/blockdataapis.egg-info/SOURCES.txt
+src/blockdataapis.egg-info/dependency_links.txt
+src/blockdataapis.egg-info/entry_points.txt
+src/blockdataapis.egg-info/requires.txt
+src/blockdataapis.egg-info/top_level.txt
