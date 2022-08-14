@@ -1,6 +1,5 @@
 import requests
 from decouple import config
-import pandas as pd
 
 API_TOKEN = config("etherscan_token", default="")
 
@@ -76,3 +75,5 @@ class Explorer(Block):
 
 class Exchanges(Block):
     pass
+
+
