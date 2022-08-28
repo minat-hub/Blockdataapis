@@ -1,4 +1,4 @@
-from base import Explorer, Marketplace, Exchanges
+from src.blockapiwrapper.base import Explorer, Marketplace, Exchanges
 import pandas as pd
 import requests
 from decouple import config
