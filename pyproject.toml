@@ -30,7 +30,7 @@ dev = ["black", "bumpver", "isort", "pip-tools", "pandas"]
 Homepage = "https://github.com/minat-hub/Blockdataapis"
 
 [project.scripts]
-blockdataapis = "blockapiwrapper.__main__"
+blockdataapis = "blockapiwrapper.base"
 
 
 
