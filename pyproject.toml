@@ -35,8 +35,8 @@ blockdataapis = "blockapiwrapper.base"
 
 
 [tool.bumpver]
-current_version = "2022.1003-alpha"
-version_pattern = "YYYY.BUILD[-TAG]"
+current_version = "2022.1004-alpha"
+version_pattern = "YYYY.BUILD-TAG"
 commit_message = "bump version {old_version} -> {new_version}"
 commit = true
 tag = true
