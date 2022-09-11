@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "blockdataapis"
-version = "1.0.1"
+version = "1.0.2"
 description = "Reads blockchain data from apis gotten from exchanges, NFT Marketplaces, explorers etc"
 readme = "README.md"
 authors = [{ name = "Aminat Amusa", email = "minaomobonike@gmail.com" }]
